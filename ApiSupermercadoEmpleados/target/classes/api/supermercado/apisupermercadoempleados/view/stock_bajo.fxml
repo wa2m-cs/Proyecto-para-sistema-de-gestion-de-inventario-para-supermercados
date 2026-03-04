@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="api.supermercado.apisupermercadoempleados.controller.StockBajoController"
+      spacing="10" style="-fx-padding:16;" prefWidth="1100" prefHeight="700">
+
+    <HBox spacing="10">
+        <Button fx:id="btnVolver" text="← Volver" onAction="#volver"/>
+        <Label text="Stock Bajo Mínimo" style="-fx-font-size:18; -fx-font-weight:bold;"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <Button text="Refrescar" onAction="#loadStockBajo"/>
+        <Button text="Subir stock" onAction="#subirStock"/>
+    </HBox>
+
+    <TableView fx:id="tblStockBajo" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colId" text="ID" prefWidth="90"/>
+            <TableColumn fx:id="colNombre" text="Producto" prefWidth="650"/>
+            <TableColumn fx:id="colStock" text="Stock" prefWidth="120"/>
+        </columns>
+    </TableView>
+
+</VBox>

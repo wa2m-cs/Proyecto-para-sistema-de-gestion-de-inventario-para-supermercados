@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="api.supermercado.apisupermercadoempleados.controller.LoginController"
+      spacing="12" alignment="CENTER" prefWidth="420" prefHeight="320">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Inicio de sesión de empleado" style="-fx-font-size: 20; -fx-font-weight: bold;"/>
+
+    <Label text="Correo:"/>
+    <TextField fx:id="txtCorreo" maxWidth="260"/>
+    <Label text="Contraseña:"/>
+    <PasswordField fx:id="txtContrasena" maxWidth="260"/>
+
+    <Button text="Iniciar sesión" onAction="#onLogin" maxWidth="260"/>
+</VBox>
